@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:44:08 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/23 12:35:29 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/23 19:05:02 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,9 @@ t_data	ft_push_a(t_data	*piles)
 t_stack	*ft_rotate(t_stack *lsta, char *str)
 {
 	int	temp;
-
+	
+	if (ft_isempty(lsta))
+		return (lsta);
 	while (lsta -> next != NULL)
 	{
 		if (lsta)
@@ -92,11 +94,13 @@ t_stack	*ft_rotate(t_stack *lsta, char *str)
 	return (lsta);
 }
 
+
 t_data	ft_rotate_rr(t_data piles)
 {
 	int		temp;
 	int		temp2;
-
+	if (ft_isempty(piles.lists.lista) || ft_isempty(piles.lists.listb))
+		return (piles);
 	while (piles.lists.lista -> next != NULL)
 	{
 		if (piles.lists.lista)
@@ -119,4 +123,43 @@ t_data	ft_rotate_rr(t_data piles)
 	}
 	ft_printf ("rr\n");
 	return (piles);
+}
+
+
+t_data	ft_rotate_rrr(t_data piles)
+{
+	if (ft_isempty(piles.lists.lista) || ft_isempty(piles.lists.listb))
+		return (piles);
+	piles.lists.lista = ft_rrotate2(piles.lists.lista);
+	piles.lists.listb = ft_rrotate2(piles.lists.listb);
+
+	ft_printf ("rrr\n");
+	return (piles);
+}
+
+t_stack	*ft_rrotate(t_stack *lsta, char *str)
+{
+	t_stack	*temp;
+	
+	if (ft_isempty(lsta))
+		return (lsta);
+	temp = lsta;
+	while (temp -> next != NULL)
+		temp = temp -> next;
+	lsta = push_front_list(lsta,temp-> value);
+	lsta = pop_back_list(lsta);
+	ft_printf ("%s\n", str);
+	return (lsta);
+}
+
+t_stack	*ft_rrotate2(t_stack *lsta)
+{
+	t_stack	*temp;
+	
+	temp = lsta;
+	while (temp -> next != NULL)
+		temp = temp -> next;
+	lsta = push_front_list(lsta,temp-> value);
+	lsta = pop_back_list(lsta);
+	return (lsta);
 }

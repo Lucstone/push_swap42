@@ -6,7 +6,7 @@
 #    By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 11:56:41 by lnaidu            #+#    #+#              #
-#    Updated: 2023/01/23 12:18:55 by lnaidu           ###   ########.fr        #
+#    Updated: 2023/01/23 17:48:38 by lnaidu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ all : ${NAME}
 OBJS = ${SRC:.c=.o}
 
 %.o: %.c
-	$(CC) -Wall -Wextra -Werror -Imlx -c $< -o $@
+	$(CC) -Wall -Wextra -Werror -c $< -o $@
 
 $(NAME): $(OBJS)
 	make all bonus -C ./Libft

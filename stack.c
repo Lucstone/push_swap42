@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 12:23:26 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/23 12:45:21 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/23 17:53:54 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_stack *push_back_list(t_stack *st, int x)
 
 	if(element == NULL)
 	{
-		ft_printf("not working\n");
+		ft_printf("not workingpbl\n");
 		exit(EXIT_FAILURE);
 	}
 	element -> value = x;
@@ -57,7 +57,7 @@ t_stack *push_front_list(t_stack *li, int x)
 
 	if(element == NULL)
 	{
-		ft_printf("not working\n");
+		ft_printf("not workingpfl\n");
 		exit(EXIT_FAILURE);
 	}
 	element->value = x;
@@ -103,7 +103,7 @@ t_stack *pop_stack(t_stack *st)
 	element = malloc(sizeof(*element));
 	if(element == NULL)
 	{
-		ft_printf("not working\n");
+		ft_printf("not workingps\n");
 		free (element);
 		exit (EXIT_FAILURE);
 	}

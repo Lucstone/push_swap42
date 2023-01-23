@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:55 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/23 12:34:01 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/23 19:00:14 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,8 @@ t_data	ft_push_a(t_data *piles);
 t_data	ft_swap_ss(t_data *piles);
 t_stack	*ft_rotate(t_stack *lst, char *str);
 t_data	ft_rotate_rr(t_data piles);
+t_stack	*ft_rrotate(t_stack *lsta, char *str);
+t_stack	*ft_rrotate2(t_stack *lsta);
+t_data	ft_rotate_rrr(t_data piles);
 
 #endif

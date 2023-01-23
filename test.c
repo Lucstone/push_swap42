@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:56:28 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/23 12:46:09 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/23 19:02:29 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,7 @@ int main(int ac, char **av)
 		pile.lists.lista = push_back_list(pile.lists.lista, tmp);
 		i++;
 	}
-	ft_swap_ss(&pile);
-	print_stack(pile.lists.lista);
-	ft_printf("-\na\n");
-	print_stack(pile.lists.listb);
-	ft_printf("-\nb\n");
-	ft_printf("-----------------------------\n");
-	ft_rotate(pile.lists.lista, "ra");
+	ft_swap(pile.lists.lista,"sa");
 	print_stack(pile.lists.lista);
 	ft_printf("-\na\n");
 	print_stack(pile.lists.listb);
@@ -43,19 +37,68 @@ int main(int ac, char **av)
 	ft_push_b(&pile);
 	ft_push_b(&pile);
 	ft_push_b(&pile);
-	ft_push_b(&pile);
 	print_stack(pile.lists.lista);
 	ft_printf("-\na\n");
 	print_stack(pile.lists.listb);
 	ft_printf("-\nb\n");
 	ft_printf("-----------------------------\n");
+	/*ft_rotate(pile.lists.lista, "ra");
+	ft_rotate(pile.lists.listb, "rb");*/
 	ft_rotate_rr(pile);
 	print_stack(pile.lists.lista);
 	ft_printf("-\na\n");
 	print_stack(pile.lists.listb);
 	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	pile = ft_rotate_rrr(pile);
+	//pile.lists.listb = ft_rrotate(pile.lists.listb, "rrb");
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	ft_swap(pile.lists.lista,"sa");
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	ft_push_a(&pile);
+	ft_push_a(&pile);
+	ft_push_a(&pile);
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	/*ft_swap_ss(&pile);
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	ft_rrotate(pile.lists.lista, "rra");
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	ft_push_b(&pile);
+	ft_push_b(&pile);
+	ft_push_b(&pile);
+	ft_push_b(&pile);
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
+	ft_printf("-----------------------------\n");
+	ft_rotate_rrr(pile);
+	print_stack(pile.lists.lista);
+	ft_printf("-\na\n");
+	print_stack(pile.lists.listb);
+	ft_printf("-\nb\n");
 	pile.lists.lista = clear_stack(pile.lists.lista);
-	pile.lists.listb = clear_stack(pile.lists.listb);
+	pile.lists.listb = clear_stack(pile.lists.listb);*/
 	//system("leaks push_swap");
 	return (0);
 }
