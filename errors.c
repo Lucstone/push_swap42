@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:03 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/20 13:57:05 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/24 17:23:02 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long	ft_atol(const char *str)
 {
-	int	i;
-	int	neg;
+	int		i;
+	int		neg;
 	long	res;
 
 	i = 0;
@@ -39,7 +39,7 @@ long	ft_atol(const char *str)
 
 int	ft_errornumber(char *str)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (str[c])
@@ -48,7 +48,6 @@ int	ft_errornumber(char *str)
 			c++;
 		if (!(str[c] >= 48 && str[c] <= 57))
 			return (1);
-		//printf("-%d-", str[c]);
 		c++;
 	}
 	return (0);
@@ -61,15 +60,14 @@ long	ft_cmp(long *s, int k)
 
 	i = 1;
 	j = 0;
-	while (k > i)
+	while (i < k)
 	{
 		j = i + 1;
-		while (s[j])
+		while (j < k)
 		{
 			if (s[i] == s[j])
 			{
-				printf("-%ld-\n", s[i]);
-				printf("*%ld*\n", s[j]);
+				ft_printf("ERROR\n");
 				return (1);
 			}
 			j++;
@@ -79,38 +77,30 @@ long	ft_cmp(long *s, int k)
 	return (0);
 }
 
-/*int main (int ac, char **av)
+int	ft_error(int ac, char **av, int i)
 {
 	long	*tmp;
-	int i;
-	int j;
 
-	i = 1;
-	j = 0;
-	tmp = malloc(sizeof(int) * (ac - 1));
+	tmp = malloc(sizeof(*tmp) * (ac));
 	while (i < (ac))
 	{
+		if (ft_errornumber(av[i]))
+		{
+			printf("error2222");
+			free (tmp);
+			exit(EXIT_FAILURE);
+		}
 		tmp[i] = ft_atol(av[i]);
 		if (tmp[i] < -2147483648 || tmp[i] > 2147483647)
 		{
 			printf("ERROR INT");
-			return (EXIT_FAILURE);
+			free (tmp);
+			exit(EXIT_FAILURE);
 		}
-		if (ft_errornumber(av[i]))
-		{
-			printf("error");
-			return (EXIT_FAILURE);
-		}
-		printf("%ld", tmp[i]);
 		i++;
 	}
-	j = i;
-	if ((ft_cmp(tmp, j)))
-	{
-		printf("ERRORR2");
-		return (EXIT_FAILURE);
-	}
-	printf("WIN");
-	//system("leaks push_swap");
+	if (ft_cmp(tmp, i))
+		exit(EXIT_FAILURE);
+	free (tmp);
 	return (0);
-}*/
+}

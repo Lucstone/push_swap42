@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnaidu <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:41:52 by lnaidu            #+#    #+#             */
-/*   Updated: 2022/11/15 10:53:36 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/24 15:09:32 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s + i);
 	return (NULL);
 }
-/*
-int main() {
-
-    const char * source = "The C Language";
-    char * destination;
-    char * pointer;
-    int length = strlen( source );
-
-    destination = (char *) malloc( sizeof( char) * (length+1) );
-    strcpy( destination, source );
-
-    while (pointer = strchr( destination, 'a' ) ) {
-        *pointer = 'A';
-    }
-
-    printf( "Result : %s\n", destination );
-
-    free( destination );
-
-    return 0;
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnaidu <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:57:55 by lnaidu            #+#    #+#             */
-/*   Updated: 2022/11/17 17:46:22 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/24 15:09:24 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,16 +84,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (execute(s, c, len, taille));
 }
-/*
-int	main()
-{
-	char set = '\0';
-	char **tab;
-
-	tab = ft_split("\0aaaa\0bbb",set);
-
-	printf("%s\n", tab[0]);
-	printf("%s\n", tab[1]);
-	printf("%s\n", tab[2]);
-	return (0);
-}*/

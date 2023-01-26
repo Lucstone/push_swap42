@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnaidu <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:11:41 by lnaidu            #+#    #+#             */
-/*   Updated: 2022/11/15 10:54:18 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/24 15:08:50 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char *src = "/|\x12\xff\x09\x42\2002\42|\\";
-	int size = 10;
-
-	printf("%s\n",ft_memchr(src, '\200', size));
-	printf("%s\n",memchr(src, '\200', size));
-	return(0);
-}*/

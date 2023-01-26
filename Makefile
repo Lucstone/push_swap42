@@ -6,21 +6,21 @@
 #    By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 11:56:41 by lnaidu            #+#    #+#              #
-#    Updated: 2023/01/23 17:48:38 by lnaidu           ###   ########.fr        #
+#    Updated: 2023/01/26 17:59:01 by lnaidu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
-SRC = ./test.c ./stack.c ./mouvement.c
+CFLAGS = -Wall -Wextra -Werror
+SRC = ./test.c ./move/stack.c ./move/mouvement.c ./move/stack2.c ./move/mouvement2.c ./errors.c ./Algorithm/ft_order.c ./Algorithm/ft_algo.c ./Algorithm/ft_algo100.c
 
 all : ${NAME}
 
 OBJS = ${SRC:.c=.o}
 
 %.o: %.c
-	$(CC) -Wall -Wextra -Werror -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	make all bonus -C ./Libft

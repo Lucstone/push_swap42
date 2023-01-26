@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnaidu <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:34:38 by lnaidu            #+#    #+#             */
-/*   Updated: 2022/11/15 10:16:17 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/24 15:09:09 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int main()
-{
-	char	*str = "bonjours le amis";
-
-	ft_memset(str + 6, 58, 1);
-	printf("%s", str);
-	return (0);
-}
-*/	

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnaidu <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:28:44 by lnaidu            #+#    #+#             */
-/*   Updated: 2022/11/15 10:17:11 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/24 15:08:15 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-int main()
-{
-	char str[] = "";
-
-	ft_bzero(str + 7, 3);
-	printf("%s\n",str);
-	return (0);
-}
-*/
