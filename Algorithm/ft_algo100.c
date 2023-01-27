@@ -6,65 +6,64 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:44:43 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/26 19:34:26 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/27 19:33:55 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-/*t_stack	*ft_lastp(t_stack *temp)
+t_data	ft_l3(t_data *lst, int i, int j, int *tab)
 {
+	if (i > (list_length(lst->lists.lista) / 2))
+	{
+		while (j != lst->lists.lista->value)
+		{
+			ft_revrotatea(lst, "rra\n");
+			i--;
+		}
+	}
+	else if (i <= (list_length(lst->lists.lista) / 2))
+	{
+		while (j != lst->lists.lista->value)
+		{
+			ft_rotate(lst->lists.lista, "ra\n");
+			i++;
+		}
+	}
+	return (*lst);
+}
 
-	while (temp->lists.lista-> next != NULL)
-		temp->lists.lista = temp->lists.lista ->next;
-		return (*temp);
-}*/
-
-t_data	ft_100n(t_data *pl)
+t_data	ft_lstishigh(t_data *lst,int *tab, int i)
 {
-	/*int	i;
-	int j;
-	int k;
-	int l;
+	int		j;
 	t_stack	*temp;
 
-	i = 0;
-	temp = pl->lists.lista;
-	while (temp -> next != NULL)
+	temp = lst->lists.lista;
+	j = (i / 10) + i % 10;
+	j = i - j;
+	while (temp)
 	{
-		i = i + temp->value;
+		if (temp->value < j)
+		{
+			j = temp->value;
+		}
 		temp = temp->next;
 	}
-	i = i + temp->value;
-	printf("la valeur de la somme de temp == %d\n", i);
-	j = temp-> value;
-	printf("la valeur du dernier element de temp == %d\n", i);
-	while (pl->lists.lista ->next != NULL)
-	{
-	k = pl->lists.lista->value;
-	printf("la valeur du dernier element de temp == %d\n", k);
-	l = pl->lists.lista->next->value;
-	printf("la valeur du dernier element de temp == %d\n", l);
+	temp = lst->lists.lista;
+	while (!(temp ->value >= tab[j] && temp ->value <= tab[i]))
+		temp = temp->next;
+	return (ft_l3(lst, i, j, tab));
+}
 
-		if ((pl->lists.lista->value) < (pl->lists.lista ->next -> value))
-			printf("la valeur du dernier element de temp == %d\n", i);
-			ft_swap(pl->lists.lista,"sa");
-		temp = pl;
-		ft_lastp(temp);
-		if ((pl->lists.lista->value) < j)
-			ft_rotate(pl->lists.lista, "ra");
-		if (pl->lists.lista -> value > (i / 2))
-			ft_push_b(pl);
-	}
-	while (list_length(pl->lists.lista) != 3)
-	{
-		pl->lists.lista = ft_lstisloz(pl->lists.lista);
-		ft_push_b(pl);
-	}
-	pl->lists.lista = ft_3n(pl->lists.lista);
-	while (list_length(pl->lists.listb) != 0)
-		ft_push_a(pl);
-	while(!((ft_order2(pl->lists.lista)) && (ft_isempty(pl->lists.listb))))
-		ft_100n(pl);*/
+t_data	ft_100n(t_data *pl, int i, int *tab)
+{
+	int j;
+
+	j = 0;
+	j = (i / 10) + i % 10;
+	printf("%d", i);
+	printf("/%d/", j);
+	printf("*%d*", tab[i]);
+
 	return (*pl);
 }

@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:40:20 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/26 19:30:47 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/27 18:59:14 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_stack	*ft_2n(t_stack *lsta)
 {
 	if (lsta->value > lsta->next->value)
-		ft_swap(lsta, "sa");
+		ft_swap(lsta, "sa\n");
 	return (lsta);
 }
 
@@ -29,18 +29,18 @@ t_data	ft_3n(t_data *lsta)
 	b = lsta->lists.lista->next->value;
 	c = lsta->lists.lista->next->next->value;
 	if ((a > b) && (b < c) && (a < c))
-		ft_swap(lsta->lists.lista, "sa");
+		ft_swap(lsta->lists.lista, "sa\n");
 	if ((a > b) && (b > c) && (a > c))
 	{
-		ft_swap(lsta->lists.lista, "sa");
+		ft_swap(lsta->lists.lista, "sa\n");
 		ft_revrotatea(lsta, "rra\n");
 	}
 	if ((a > b) && (b < c) && (a > c))
-		ft_rotate(lsta->lists.lista, "ra");
+		ft_rotate(lsta->lists.lista, "ra\n");
 	if ((a < b) && (b > c) && (a < c))
 	{
-		ft_swap(lsta->lists.lista, "sa");
-		ft_rotate(lsta->lists.lista, "ra");
+		ft_swap(lsta->lists.lista, "sa\n");
+		ft_rotate(lsta->lists.lista, "ra\n");
 	}
 	if ((a < b) && (b > c) && (a > c))
 		ft_revrotatea(lsta, "rra\n");
@@ -61,7 +61,7 @@ t_data	ft_l(t_data *lst, int i, int j)
 	{
 		while (j != lst->lists.lista->value)
 		{
-			ft_rotate(lst->lists.lista, "ra");
+			ft_rotate(lst->lists.lista, "ra\n");
 			i++;
 		}
 	}

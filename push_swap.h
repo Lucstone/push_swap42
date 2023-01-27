@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:55 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/26 19:34:10 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/27 19:07:20 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,16 @@ typedef struct s_pile
 	t_stack		*listb;
 }				t_pile;
 
+typedef struct s_pile2
+{
+	t_stack		*listc;
+	t_stack		*listd;
+}				t_pile2;
+
 typedef struct s_data
 {
 	t_pile		lists;
+	t_pile2		ltemp;
 }				t_data;
 
 int		ft_error(int ac, char **av, int i);
@@ -70,6 +77,14 @@ t_stack	*ft_order2(t_stack *pile);
 t_stack	*ft_2n(t_stack *lsta);
 t_data	ft_3n(t_data *lsta);
 t_data	ft_5n(t_data *pl);
-t_data	ft_100n(t_data *pl);
+t_data	ft_100n(t_data *pl, int lenght, int *tab);
+
+/*Fonction for Array rules*/
+t_data	ft_revrotatea2(t_data *lsta);
+t_data	ft_push_d(t_data	*piles);
+t_data	ft_push_c(t_data	*piles);
+t_data	ft_l2(t_data *lst, int i, int j);
+t_data	ft_lstisloz2(t_data *lst);
+int		*tab1(int ac, char **av, int *tab, int i);
 
 #endif

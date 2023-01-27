@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:44:08 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/26 15:48:34 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/27 16:47:05 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,18 @@ t_stack	*ft_swap(t_stack *lsta, char *str)
 	temp = lsta->value;
 	lsta->value = lsta -> next-> value;
 	lsta -> next -> value = temp;
-	ft_printf ("%s\n", str);
+	ft_printf ("%s", str);
 	return (lsta);
 }
 
 t_data	ft_swap_ss(t_data *piles)
 {
-	int		temp;
-	int		temp2;
-
 	if (list_length(piles->lists.lista) <= 1)
 		return (*piles);
 	if (list_length(piles->lists.listb) <= 1)
 		return (*piles);
-	temp = piles->lists.lista->value;
-	piles->lists.lista->value = piles->lists.lista -> next-> value;
-	piles->lists.lista -> next -> value = temp;
-	temp2 = piles->lists.listb->value;
-	piles->lists.listb->value = piles->lists.listb -> next-> value;
-	piles->lists.listb -> next -> value = temp2;
+	ft_swap(piles->lists.lista, "");
+	ft_swap(piles->lists.listb, "");
 	ft_printf ("ss\n");
 	return (*piles);
 }
@@ -54,7 +47,7 @@ t_data	ft_push_b(t_data	*piles)
 	sav = piles->lists.lista->value;
 	piles->lists.listb = push_front_list(piles->lists.listb, sav);
 	piles->lists.lista = pop_stack(piles->lists.lista);
-	ft_printf("pb\n");
+	ft_printf("pa\n");
 	return (*piles);
 }
 
@@ -88,6 +81,6 @@ t_stack	*ft_rotate(t_stack *lsta, char *str)
 		}
 		lsta = lsta -> next;
 	}
-	ft_printf ("%s\n", str);
+	ft_printf ("%s", str);
 	return (lsta);
 }
