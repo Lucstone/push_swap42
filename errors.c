@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:03 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/24 17:23:02 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 20:17:24 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ long	ft_cmp(long *s, int k)
 		{
 			if (s[i] == s[j])
 			{
-				ft_printf("ERROR\n");
+				ft_printf("Error\n");
 				return (1);
 			}
 			j++;
@@ -86,14 +86,14 @@ int	ft_error(int ac, char **av, int i)
 	{
 		if (ft_errornumber(av[i]))
 		{
-			printf("error2222");
+			ft_printf("Error\n");
 			free (tmp);
 			exit(EXIT_FAILURE);
 		}
 		tmp[i] = ft_atol(av[i]);
 		if (tmp[i] < -2147483648 || tmp[i] > 2147483647)
 		{
-			printf("ERROR INT");
+			ft_printf("Error\n");
 			free (tmp);
 			exit(EXIT_FAILURE);
 		}

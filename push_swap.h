@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:55 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/27 19:07:20 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 20:28:03 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,11 @@ t_stack	*ft_order2(t_stack *pile);
 t_stack	*ft_2n(t_stack *lsta);
 t_data	ft_3n(t_data *lsta);
 t_data	ft_5n(t_data *pl);
-t_data	ft_100n(t_data *pl, int lenght, int *tab);
+t_data	ft_100n(t_data *pl, int lenght, int *tab, int j);
+t_data	ft_500n(t_data *pl, int i, int *tab, int j);
+t_data	ft_lstishigt(t_data *lst);
+t_data	ft_h(t_data *lst, int i, int j);
+t_data	endfunction(t_data *pl, int l);
 
 /*Fonction for Array rules*/
 t_data	ft_revrotatea2(t_data *lsta);

@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:44:08 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/27 16:47:05 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 17:23:02 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_data	ft_push_b(t_data	*piles)
 	sav = piles->lists.lista->value;
 	piles->lists.listb = push_front_list(piles->lists.listb, sav);
 	piles->lists.lista = pop_stack(piles->lists.lista);
-	ft_printf("pa\n");
+	ft_printf("pb\n");
 	return (*piles);
 }
 
