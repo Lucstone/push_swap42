@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:40:20 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/27 18:59:14 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 23:08:29 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,23 +93,6 @@ t_data	ft_lstisloz(t_data *lst)
 	}
 	return (ft_l(lst, i, j));
 }
-
-/*t_stack	*ft_lstishig(t_stack *lst)
-{
-	int	j;
-	t_stack *temp;
-
-	temp = lst;
-	j = -2147483648;
-	while (temp)
-	{
-		if (temp->value > j)
-			j = temp->value;
-		temp = temp->next;
-	}
-	printf("the biggest value is ; %d\n", j);
-	return (lst);
-}*/
 
 t_data	ft_5n(t_data *pl)
 {

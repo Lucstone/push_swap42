@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 12:23:26 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/26 11:23:03 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 23:24:53 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ t_stack	*pop_stack(t_stack *st)
 	element = st;
 	if (element == NULL)
 	{
-		ft_printf("not workingps\n");
 		exit (EXIT_FAILURE);
 	}
 	element = st -> next;
@@ -34,7 +33,6 @@ void	print_stack(t_stack *st)
 {
 	if (ft_isempty(st))
 	{
-		ft_printf("vide. \n");
 		return ;
 	}
 	while (!ft_isempty(st))

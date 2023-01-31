@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:56:28 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/31 20:56:04 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 23:44:00 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_data	ft_norm(t_data pile, char **av, int i, int ac)
+t_data	ft_norm(t_data pile, int ac, int i, char **av)
 {
 	int	*tab;
 
@@ -45,16 +45,20 @@ int	main(int ac, char **av)
 
 	tmp = 0;
 	i = 1;
+	if (ft_error((ac), av, 1))
+		return (EXIT_FAILURE);
+	if (ac <= 2)
+		return (0);
 	pile.lists.lista = new_stack();
 	pile.lists.listb = new_stack();
-	ft_error((ac), av, 1);
 	while (i < ac)
 	{
 		tmp = ft_atoi(av[i]);
 		pile.lists.lista = push_back_list(pile.lists.lista, tmp);
 		i++;
 	}
-	ft_norm(pile, av, i, ac);
+	pile = ft_norm(pile, ac, i, av);
+
 	pile.lists.lista = clear_stack(pile.lists.lista);
 	pile.lists.listb = clear_stack(pile.lists.listb);
 	return (0);
