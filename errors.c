@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:03 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/31 23:47:31 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 23:52:20 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	ft_error(int ac, char **av, int i)
 			return (1);
 		}
 		tmp[i] = ft_atol(av[i]);
-		if (tmp[i] <= -2147483648 || tmp[i] >= 2147483647)
+		if (tmp[i] < -2147483648 || tmp[i] > 2147483647)
 		{
 			write(2, "Error\n", 6);
 			free (tmp);

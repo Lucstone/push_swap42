@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:56:28 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/31 23:44:00 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/31 23:56:03 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ int	main(int ac, char **av)
 	int		tmp;
 	int		i;
 
+	if (ac < 2)
+		return (0);
 	tmp = 0;
 	i = 1;
 	if (ft_error((ac), av, 1))
-		return (EXIT_FAILURE);
-	if (ac <= 2)
-		return (0);
+		exit (EXIT_FAILURE);
 	pile.lists.lista = new_stack();
 	pile.lists.listb = new_stack();
 	while (i < ac)
@@ -58,7 +58,6 @@ int	main(int ac, char **av)
 		i++;
 	}
 	pile = ft_norm(pile, ac, i, av);
-
 	pile.lists.lista = clear_stack(pile.lists.lista);
 	pile.lists.listb = clear_stack(pile.lists.listb);
 	return (0);
