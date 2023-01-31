@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 11:56:03 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/31 23:52:20 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/02/01 00:25:10 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,14 @@ int	ft_errornumber(char *str)
 	int	c;
 
 	c = 0;
+	if (ft_strlen(str) == 0)
+		return (1);
+	if ((ft_strlen(str) == 1) && (str[c] == '-' || str[c] == '+'))
+		return (1);
+	if (str[c] == '-' || str[c] == '+')
+		c++;
 	while (str[c])
 	{
-		if (str[c] == '-' || str[c] == '+')
-			c++;
 		if (!(str[c] >= 48 && str[c] <= 57))
 			return (1);
 		c++;
@@ -68,7 +72,7 @@ long	ft_cmp(long *s, int k)
 			if (s[i] == s[j])
 			{
 				write(2, "Error\n", 6);
-				return (1);
+				exit (EXIT_FAILURE);
 			}
 			j++;
 		}
@@ -88,22 +92,19 @@ int	ft_error(int ac, char **av, int i)
 		{
 			write(2, "Error\n", 6);
 			free (tmp);
-			return (1);
+			exit (EXIT_FAILURE);
 		}
 		tmp[i] = ft_atol(av[i]);
 		if (tmp[i] < -2147483648 || tmp[i] > 2147483647)
 		{
 			write(2, "Error\n", 6);
 			free (tmp);
-			return (1);
+			exit (EXIT_FAILURE);
 		}
 		i++;
 	}
 	if (ft_cmp(tmp, i) == 1)
-	{
-		free (tmp);
-		return (1);
-	}
+		exit (EXIT_FAILURE);
 	free (tmp);
 	return (0);
 }
